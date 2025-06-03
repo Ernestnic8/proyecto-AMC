@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import Inicio from "../Pages/Inicio";
-import RawInicio from "../Pages/Raw/RawInicio";
-import RawUsoYEditar from "../Pages/Raw/RawUsoYEditar";
-import RawVenDes from "../Pages/Raw/RawVenDes";
+import Inicio from "@pages/Inicio";
+import RawInicio from "@pages/Raw/RawInicio";
+import RawUsoYEditar from "@pages/Raw/RawUsoYEditar";
+import RawVenDes from "@pages/Raw/RawVenDes";
+import MicroprocessorRouter from "./MicroprocessorRouter";
 
 const AmcRouter = () => {
   return (
@@ -18,9 +19,11 @@ const AmcRouter = () => {
         }
       />
       <Route path="/" element={<Inicio />} />
-      <Route path="/raw" element={<RawInicio/>} />
-      <Route path="/raw/uso-edicion" element={<RawUsoYEditar /> }/>
+      <Route path="/raw" element={<RawInicio />} />
+      <Route path="/raw/uso-edicion" element={<RawUsoYEditar />} />
       <Route path="/raw/ventajas-y-des" element={<RawVenDes />} />
+      <Route path="/microprocesadores/*" element={<MicroprocessorRouter />} />
+      
     </Routes>
   );
 };
