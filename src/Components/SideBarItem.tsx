@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect, ReactNode } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { SidebarContext } from "./SideBar";
 
 type SidebarItemProps = {
@@ -44,7 +44,7 @@ export function SidebarItem({
       onClick={handleClick}
       className={`
         relative flex items-center py-2 px-3 my-1
-        font-medium rounded-md transition-colors group cursor-pointer
+        font-medium rounded-md transition-all duration-300 ease-in-out group cursor-pointer
         hover:bg-indigo-50 dark:hover:bg-indigo-800 text-gray-600 dark:text-gray-300
       `}
     >
@@ -64,8 +64,12 @@ export function SidebarItem({
         />
       )}
       {hasChildren && expanded && (
-        <span className="ml-auto transition-transform">
-          {open ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
+        <span
+          className={`ml-auto transition-transform duration-300 ease-in-out ${
+            open ? "rotate-90" : "rotate-0"
+          }`}
+        >
+          <ChevronRight size={18} />
         </span>
       )}
     </div>
