@@ -4,6 +4,8 @@ import RawInicio from "@pages/Raw/RawInicio";
 import RawUsoYEditar from "@pages/Raw/RawUsoYEditar";
 import RawVenDes from "@pages/Raw/RawVenDes";
 import MicroprocessorRouter from "./MicroprocessorRouter";
+import MicrocontrollerRoute from "./MicrocontrollerRoute";
+import DifferenceRoute from "./DifferenceRoute";
 
 const AmcRouter = () => {
   return (
@@ -23,7 +25,8 @@ const AmcRouter = () => {
       <Route path="/raw/uso-edicion" element={<RawUsoYEditar />} />
       <Route path="/raw/ventajas-y-des" element={<RawVenDes />} />
       <Route path="/microprocesadores/*" element={<MicroprocessorRouter />} />
-      
+      <Route path="/microcontrolador/*" element={<MicrocontrollerRoute />} />
+      <Route path="/mprocess-vs-mcontroller/*" element={<DifferenceRoute />} />
     </Routes>
   );
 };

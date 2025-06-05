@@ -1,7 +1,16 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import Sidebar from "./Components/SideBar";
 import { SidebarItem } from "./Components/SideBarItem";
-import { Home, Memory, DeveloperBoard, Difference } from "@mui/icons-material";
+import {
+  Home,
+  Memory,
+  DeveloperBoard,
+  Difference,
+  SnippetFolder,
+  Storage,
+  Autorenew,
+  CompareArrows,
+} from "@mui/icons-material";
 import AmcRouter from "./routes/AmcRouter";
 
 const App = () => {
@@ -16,7 +25,11 @@ const App = () => {
             subRoutes={[
               "/microprocesadores",
               "/microprocesadores/arquitectura",
-              "/raw/ventajas-y-des",
+              "/microprocesadores/estructura-pc",
+              "/microprocesadores/estructura-interna",
+              "/microprocesadores/registros",
+              "/microprocesadores/buses",
+              "/microprocesadores/ciclo-ejecucion",
             ]}
           >
             <SidebarItem
@@ -80,13 +93,51 @@ const App = () => {
               text="Estructura de la PC"
               to="/microprocesadores/estructura-pc"
             />
+            <SidebarItem
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"
+                  />
+                </svg>
+              }
+              text="Estructura Interna"
+              to="/microprocesadores/estructura-interna"
+            />
+            <SidebarItem
+              icon={<SnippetFolder fontSize="small" />}
+              text="Registros"
+              to="/microprocesadores/registros"
+            />
+            <SidebarItem
+              icon={<Storage fontSize="small" />}
+              text="Buses de Datos"
+              to="/microprocesadores/buses"
+            />
+            <SidebarItem
+              icon={<Autorenew fontSize="small" />}
+              text="Ciclo de Ejecución"
+              to="/microprocesadores/ciclo-ejecucion"
+            />
+            <SidebarItem
+              icon={<CompareArrows fontSize="small" />}
+              text="Modo de Dirección"
+              to="/microprocesadores/modo-direccion"
+            />
           </SidebarItem>
           <SidebarItem
             icon={<DeveloperBoard fontSize="small" />}
             text="Microcontroladores"
             subRoutes={[
-              "/microprocesadores",
-              "/microprocesadores/arquitectura",
               "/raw/ventajas-y-des",
             ]}
           >
@@ -113,12 +164,8 @@ const App = () => {
           </SidebarItem>
           <SidebarItem
             icon={<Difference fontSize="small" />}
-            text="Diferencias entre Microprocesadores y Microcontroladores"
-            subRoutes={[
-              "/microprocesadores",
-              "/microprocesadores/arquitectura",
-              "/raw/ventajas-y-des",
-            ]}
+            text="Diferencias"
+            subRoutes={["/mprocess-vs-mcontroller"]}
           >
             <SidebarItem
               icon={
@@ -137,8 +184,8 @@ const App = () => {
                   />
                 </svg>
               }
-              text="Introduccion"
-              to="/microprocesadores"
+              text="Diferencias"
+              to="/mprocess-vs-mcontroller"
             />
           </SidebarItem>
         </Sidebar>

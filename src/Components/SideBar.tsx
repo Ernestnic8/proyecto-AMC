@@ -28,13 +28,13 @@ export default function Sidebar({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <aside className="h-screen text-black">
+    <aside className="h-screen just text-black">
       <nav className="h-full flex flex-col bg-white/30 backdrop-blur border-r  shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center">
           <img
-            src="/image/uni.png"
-            className={`overflow-hidden transition-all ${
-              expanded ? "w-32" : "w-15"
+            src={"/image/unilogo.png"}
+            className={`overflow-hidden transition-all  ${
+              expanded ? "w-20" : "w-10 mr-3"
             }`}
             alt=""
           />

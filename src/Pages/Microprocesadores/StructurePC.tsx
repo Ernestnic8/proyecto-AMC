@@ -216,7 +216,6 @@ const StructurePC = () => {
             cuellos de botella (llamado "Von Neumann Bottleneck").
           </li>
         </ul>
-        <p></p>
       </Background>
     </div>
   );
