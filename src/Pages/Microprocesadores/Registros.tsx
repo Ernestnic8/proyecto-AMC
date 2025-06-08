@@ -1,15 +1,16 @@
 import Background from "@components/Base/Background";
+import ListDecimal from "@components/Base/ListDecimal";
+import ListDisc from "@components/Base/ListDisc";
+import Parrafo from "@components/Base/Parrafo";
+import SubText from "@components/Base/SubText";
 
 const Registros = () => {
   return (
-    <Background>
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
-        Registros del Procesador
-      </h1>
-      <h1 className="text-2xl text-blue-900 font-bold text-center mb-2">
+    <Background text="Registros del Procesador">
+      <SubText>
         ¿Qué son los registros?
-      </h1>
-      <p className="text-lg text-gray-700 mb-4 text-justify">
+      </SubText>
+      <Parrafo>
         Los registros son pequeñas memorias ultrarrápidas ubicadas dentro del
         microprocesador. Se utilizan para almacenar datos temporales durante la
         ejecución de programas. A diferencia de la memoria RAM, los registros
@@ -23,12 +24,12 @@ const Registros = () => {
           <li>Controlar el flujo del programa.</li>
           <li>Gestionar las instrucciones en curso.</li>
         </ul>
-      </p>
+      </Parrafo>
 
-      <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4 text-center">
+      <SubText>
         Tipos de registros
-      </h2>
-      <ul className="list-decimal list-inside text-gray-700 space-y-2">
+      </SubText>
+      <ListDecimal>
         <li className="font-bold">Registros de propósito general</li>
         <p>Se usan para almacenar datos temporales que el programa necesita.</p>
         <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
@@ -124,11 +125,11 @@ const Registros = () => {
             </ul>
           </ul>
         </ul>
-      </ul>
-      <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4 text-center">
+      </ListDecimal>
+      <SubText>
         Relación con ensamblador
-      </h2>
-      <ul className="list-disc list-inside text-gray-700 space-y-2">
+      </SubText>
+      <ListDisc>
         <li>
           El acceso y manipulación de registros es la base de cualquier programa
           en lenguaje ensamblador.
@@ -137,7 +138,7 @@ const Registros = () => {
           El uso eficiente de registros permite optimizar el consumo de memoria,
           acelerar el procesamiento y reducir el número de ciclos de reloj.
         </li>
-      </ul>
+      </ListDisc>
     </Background>
   );
 };

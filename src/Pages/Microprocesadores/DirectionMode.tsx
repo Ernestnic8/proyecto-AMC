@@ -6,6 +6,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import ListDecimal from "@components/Base/ListDecimal";
+import ListDisc from "@components/Base/ListDisc";
+import Parrafo from "@components/Base/Parrafo";
+import SubText from "@components/Base/SubText";
+import TinyText from "@components/Base/TinyText";
 
 const DirectionMode = () => {
   function createData(
@@ -37,10 +42,8 @@ const DirectionMode = () => {
 
   return (
     <Background text="Modos de Direccionamiento">
-      <h1 className="text-2xl font-bold text-center mb-6 text-blue-800">
-        ¿Qué es un modo de direccionamiento?
-      </h1>
-      <p className="text-lg text-gray-700 mb-6 text-justify">
+      <SubText>¿Qué es un modo de direccionamiento?</SubText>
+      <Parrafo>
         Un modo de direccionamiento define la forma en que una instrucción
         accede a sus operandos.
         <br />
@@ -50,13 +53,11 @@ const DirectionMode = () => {
         Cada arquitectura de procesador (x86, ARM, RISC, etc.) puede tener
         distintos modos, pero los más comunes están presentes en casi todos los
         sistemas.
-      </p>
+      </Parrafo>
 
-      <h1 className="text-lg font-bold text-center mb-6 text-gray-700">
-        Modos más comunes
-      </h1>
+      <TinyText>Modos más comunes</TinyText>
 
-      <ul className="list-decimal list-inside text-gray-700 space-y-2">
+      <ListDecimal>
         <li className="font-bold">Modo Inmediato </li>
         <p>El operando está incluido directamente en la instrucción.</p>
         <p className="font-bold">Funciones:</p>
@@ -143,10 +144,10 @@ const DirectionMode = () => {
           <br />
           Ideal para bucles, condicionales y llamadas a subrutinas locales.
         </p>
-      </ul>
-      <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4 text-center">
-        Comparación entre modos
-      </h2>
+      </ListDecimal>
+      <div className="mt-6 mb-4">
+        <SubText>Comparación entre modos</SubText>
+      </div>
 
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="table">
@@ -175,16 +176,21 @@ const DirectionMode = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4 text-center">
-        ¿Por qué son importantes?
-      </h2>
-      <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-        <li>Permiten que el mismo conjunto de instrucciones trabaje con distintos tipos de datos y estructuras.</li>
-        <li>
-          Muy útil en estructuras de datos dinámicas como listas, pilas, colas,
-          etc
-        </li>
-      </ul>
+      <div className="mt-6 mb-4">
+        <SubText>¿Por qué son importantes?</SubText>
+      </div>
+      <div className="mt-6">
+        <ListDisc>
+          <li>
+            Permiten que el mismo conjunto de instrucciones trabaje con
+            distintos tipos de datos y estructuras.
+          </li>
+          <li>
+            Muy útil en estructuras de datos dinámicas como listas, pilas,
+            colas, etc
+          </li>
+        </ListDisc>
+      </div>
     </Background>
   );
 };

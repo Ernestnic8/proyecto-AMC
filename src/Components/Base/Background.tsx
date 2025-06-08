@@ -5,7 +5,7 @@ const Background = ({
   text,
 }: {
   children: ReactNode;
-  text?: string;
+  text: string;
 }) => {
   return (
     <div className="min-h-screen bg-white/60 flex items-center justify-center p-6 rounded-lg">

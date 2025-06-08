@@ -1,15 +1,15 @@
 import Background from "@components/Base/Background";
+import ListDecimal from "@components/Base/ListDecimal";
+import ListDisc from "@components/Base/ListDisc";
+import Parrafo from "@components/Base/Parrafo";
+import SubText from "@components/Base/SubText";
+import TinyText from "@components/Base/TinyText";
 
 const InternalArchitecture = () => {
   return (
-    <Background>
-      <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">
-        Estructura Interna del Microprocesador
-      </h1>
-      <h1 className="text-2xl font-bold text-center mb-6 text-blue-800">
-        ¿Qué es la arquitectura interna de un microprocesador?
-      </h1>
-      <p className="text-lg text-gray-700 mb-6 text-justify">
+    <Background text="Estructura Interna del Microprocesador">
+      <SubText>¿Qué es la arquitectura interna de un microprocesador?</SubText>
+      <Parrafo>
         La arquitectura interna de un microprocesador se refiere a la forma en
         que están organizados y conectados sus bloques funcionales internos, los
         cuales permiten ejecutar instrucciones, manipular datos y controlar
@@ -17,11 +17,9 @@ const InternalArchitecture = () => {
         <br />
         Estos bloques trabajan de forma coordinada para realizar el ciclo de
         instrucción, que es el núcleo del funcionamiento del sistema.
-      </p>
-      <h1 className="text-lg font-bold text-center mb-6 text-gray-700">
-        Componentes principales del microprocesador
-      </h1>
-      <ul className="list-decimal list-inside text-gray-700 space-y-2">
+      </Parrafo>
+      <TinyText>Componentes principales del microprocesador</TinyText>
+      <ListDecimal>
         <li className="font-bold">Unidad de Control (Control Unit - CU) </li>
         <p>Es el “director de orquesta” del microprocesador.</p>
         <p className="font-bold">Funciones:</p>
@@ -110,19 +108,17 @@ const InternalArchitecture = () => {
           Estas interconexiones permiten la transferencia eficiente de
           información entre los bloques funcionales del microprocesador.
         </p>
-      </ul>
-      <p className="text-xl mt-6 font-bold text-blue-700 mb-6 text-center">
-        {" "}
-        Diagrama básico de bloques
-      </p>
+      </ListDecimal>
+      <div className="mb-6">
+        <SubText>Diagrama básico de bloques</SubText>
+      </div>
+
       <div className="flex justify-center mb-6">
         <img src="/image/diagrama.png" alt="diagrama" className="max-w-100" />
       </div>
-      <p className="text-xl mt-6 font-bold text-blue-700 mb-6 text-center">
-        {" "}
-        ¿Por qué es importante entender esta arquitectura?
-      </p>
-      <ul className="list-disc list-inside pl-3 text-gray-700 space-y-2">
+
+      <SubText>¿Por qué es importante entender esta arquitectura?</SubText>
+      <ListDisc>
         <li>
           Permite comprender cómo se ejecuta cada instrucción paso a paso.
         </li>
@@ -134,17 +130,13 @@ const InternalArchitecture = () => {
           Facilita el diseño de microprocesadores personalizados en campos como
           FPGA, sistemas embebidos o investigación.
         </li>
-      </ul>
-      <p className="text-xl mt-6 font-bold text-blue-700 mb-6 text-center">
-        {" "}
-        Ejemplo práctico
-      </p>
-      <p className="text-lg mt-6 text-gray-700 mb-6 text-justify">
-        {" "}
-        Supón que ejecutamos una instrucción como ADD A, B:
-      </p>
-      <ul className="list-decimal list-inside pl-3 text-gray-700 space-y-2 ">
-        <li className="font-bold">El PC señala la dirección de la instrucción.</li>
+      </ListDisc>
+      <SubText> Ejemplo práctico</SubText>
+      <TinyText>Supón que ejecutamos una instrucción como ADD A, B:</TinyText>
+      <ListDecimal>
+        <li className="font-bold">
+          El PC señala la dirección de la instrucción.
+        </li>
         <p className="pl-6">
           El PC contiene la dirección de la siguiente instrucción que debe
           ejecutarse. En este caso, apunta a la instrucción ADD A, B
@@ -161,7 +153,9 @@ const InternalArchitecture = () => {
           señales necesarias para que los componentes adecuados (como la ALU y
           los registros) ejecuten la operación.
         </p>
-        <li className="font-bold">La ALU realiza la suma de los valores de los registros A y B.</li>
+        <li className="font-bold">
+          La ALU realiza la suma de los valores de los registros A y B.
+        </li>
         <p className="pl-6">
           La ALU toma los valores actuales almacenados en los registros A y B y
           los suma.
@@ -181,8 +175,8 @@ const InternalArchitecture = () => {
           Desbordamiento, Acarreo, etc.), que pueden influir en futuras
           decisiones de control de flujo (como saltos condicionales).
         </p>
-      </ul>
-      <p className="text-md mt-1 text-gray-700 mb-6 text-justify">
+      </ListDecimal>
+      <Parrafo>
         <strong>Conclusión:</strong> <br />
         La ejecución de una instrucción como ADD A, B es un proceso sistemático
         que implica varias etapas clave dentro del procesador: localización de
@@ -190,7 +184,7 @@ const InternalArchitecture = () => {
         y actualización del estado del sistema. Este ciclo refleja cómo una CPU
         coordina internamente sus componentes para realizar operaciones
         aritméticas y mantener el control del flujo de ejecución del programa.
-      </p>
+      </Parrafo>
     </Background>
   );
 };

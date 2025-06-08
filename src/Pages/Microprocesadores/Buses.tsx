@@ -1,15 +1,17 @@
 import Background from "@components/Base/Background";
+import ListDecimal from "@components/Base/ListDecimal";
+import ListDisc from "@components/Base/ListDisc";
+import Parrafo from "@components/Base/Parrafo";
+import SubText from "@components/Base/SubText";
+import TinyText from "@components/Base/TinyText";
 
 const Buses = () => {
   return (
-    <Background>
-      <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">
-        Buses del Sistema
-      </h1>
-      <h1 className="text-2xl font-bold text-center mb-6 text-blue-800">
+    <Background text="Buses del Sistema">
+      <SubText>
         ¿Qué es un bus en arquitectura de computadoras?
-      </h1>
-      <p className="text-lg text-gray-700 mb-6 text-justify">
+      </SubText>
+      <Parrafo>
         Un bus es un canal de comunicación que permite la transferencia de
         datos, direcciones y señales de control entre los distintos componentes
         de una computadora: CPU, memoria y dispositivos de entrada/salida.
@@ -17,15 +19,15 @@ const Buses = () => {
         Podemos imaginar los buses como “autopistas internas” que interconectan
         todas las partes del sistema, facilitando que los datos fluyan de forma
         sincronizada y eficiente.
-      </p>
+      </Parrafo>
 
-      <h1 className="text-lg font-bold text-center mb-6 text-gray-700">
+      <TinyText>
         Tipos principales de buses
-      </h1>
-      <ul className="list-decimal list-inside text-gray-700 space-y-2">
+      </TinyText>
+      <ListDecimal>
         <li className="font-bold">Bus de Datos</li>
         <p>Transporta la información real que se mueve dentro del sistema.</p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
+        <ListDisc>
           <li>
             Se utiliza para leer o escribir datos entre la CPU, la memoria y los
             dispositivos de entrada/salida.
@@ -38,7 +40,7 @@ const Buses = () => {
             Su ancho (número de líneas) determina cuántos bits pueden
             transferirse simultáneamente
           </li>
-        </ul>
+        </ListDisc>
 
         <p className="font-bold">Ejemplo:</p>
         <p>
@@ -98,15 +100,15 @@ const Buses = () => {
           <strong>RESET: </strong>
           reinicia el sistema.
         </p>
-      </ul>
+      </ListDecimal>
 
-      <p className="text-xl mt-6 font-bold text-blue-700 mb-6 text-center">
+      <SubText>
         Diagrama logico simplicado
-      </p>
+      </SubText>
       <div className="flex justify-center mb-6">
         <img src="/image/busesData.png" alt="diagrama" className="max-w-100" />
       </div>
-      <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
+      <ListDisc>
         <li>
           <strong>DATA (Datos):</strong> flujo bidireccional
         </li>
@@ -116,12 +118,12 @@ const Buses = () => {
         <li>
           <strong>CTRL (Control):</strong> flujo principalmente desde CPU
         </li>
-      </ul>
+      </ListDisc>
 
-      <p className="text-xl mt-6 font-bold text-blue-700 mb-6 text-center">
+      <SubText>
         Importancia del sistema de buses
-      </p>
-      <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
+      </SubText>
+      <ListDisc>
         <li>
           Permite que múltiples componentes se comuniquen sin necesidad de
           conexiones dedicadas.
@@ -130,12 +132,12 @@ const Buses = () => {
         <li>
           Establece un estándar para la expansión y escalabilidad del sistema
         </li>
-      </ul>
+      </ListDisc>
 
-      <p className="text-xl mt-6 font-bold text-blue-700 mb-6 text-center">
+      <SubText>
         Limitaciones y soluciones
-      </p>
-      <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
+      </SubText>
+      <ListDisc>
         <li>
           <strong>Cuello de botella (bottleneck): </strong> si varios
           dispositivos comparten un solo bus, se puede generar congestión.
@@ -145,7 +147,7 @@ const Buses = () => {
           expansión PCIe, buses duales en Harvard Architecture), o buses
           paralelos e independientes para memoria e I/O.
         </li>
-      </ul>
+      </ListDisc>
     </Background>
   );
 };

@@ -1,31 +1,33 @@
 import Background from "@components/Base/Background";
+import ListDecimal from "@components/Base/ListDecimal";
+import ListDisc from "@components/Base/ListDisc";
+import Parrafo from "@components/Base/Parrafo";
+import SubText from "@components/Base/SubText";
+import TinyText from "@components/Base/TinyText";
 
 const ExecutionCycle = () => {
   return (
-    <Background>
-      <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">
-        Ciclo de Ejecución de una Instrucción
-      </h1>
-      <h1 className="text-2xl font-bold text-center mb-6 text-blue-800">
+    <Background text="Ciclo de Ejecución de una Instrucción">
+      <SubText>
         ¿Qué es el ciclo de instrucción?
-      </h1>
-      <p className="text-lg text-gray-700 mb-6 text-justify">
+      </SubText>
+      <Parrafo>
         El ciclo de instrucción (o ciclo de máquina) es el proceso completo que
         realiza un microprocesador para leer, interpretar y ejecutar una
         instrucción de un programa.
         <br />
         Este ciclo se repite millones de veces por segundo mientras el sistema
         esté encendido. Se trata del corazón del procesamiento digital.
-      </p>
+      </Parrafo>
 
-      <h1 className="text-lg font-bold mb-6 text-center text-blue-700">
+      <SubText>
         Etapas del ciclo de instrucción
-      </h1>
-      <p className="text-lg text-gray-700 mb-6 text-justify font-bold">
+      </SubText>
+      <Parrafo>
         El ciclo básico está compuesto por cuatro fases principales:
-      </p>
+      </Parrafo>
 
-      <ul className="list-decimal list-inside text-gray-700 space-y-2">
+      <ListDecimal>
         <li className="font-bold">Búsqueda (Fetch) </li>
         <p>El procesador obtiene la instrucción desde la memoria principal.</p>
         <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
@@ -82,30 +84,30 @@ const ExecutionCycle = () => {
         <p className="text-xl mt-6 font-bold text-blue-700 mb-6 text-center">
           Rendimiento del ciclo
         </p>
-      </ul>
+      </ListDecimal>
 
-      <p className="text-lg text-gray-700 font-bold">
+      <TinyText>
         El número de ciclos de reloj que toma completar una instrucción varía:
-      </p>
+      </TinyText>
 
-      <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
+      <ListDisc>
         <li>Instrucciones simples (ej. MOV) pueden tardar 1 ciclo.</li>
         <li>
           Instrucciones más complejas (ej. MUL, CALL) pueden requerir varios
           ciclos.
         </li>
-      </ul>
+      </ListDisc>
 
-      <p className="text-lg text-gray-700 font-bold">
+      <TinyText>
         Los procesadores modernos implementan técnicas como:
-      </p>
-      <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
+      </TinyText>
+      <ListDisc>
         <li>
           Pipeline: divide el ciclo de instrucción en etapas que se ejecutan en
           paralelo.
         </li>
         <li>Superscalar: ejecutan múltiples instrucciones al mismo tiempo.</li>
-      </ul>
+      </ListDisc>
     </Background>
   );
 };

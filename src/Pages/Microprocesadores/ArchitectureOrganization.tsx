@@ -6,6 +6,11 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Background from "@components/Base/Background";
+import SubText from "@components/Base/SubText";
+import Parrafo from "@components/Base/Parrafo";
+import ListDisc from "@components/Base/ListDisc";
+import TinyText from "@components/Base/TinyText";
+import ListDecimal from "@components/Base/ListDecimal";
 
 const ArchitectureOrganization = () => {
   function createData(
@@ -31,14 +36,11 @@ const ArchitectureOrganization = () => {
     ),
   ];
   return (
-    <Background>
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
-        Arquitectura y Organización de Computadoras
-      </h1>
-      <h1 className="text-2xl text-blue-900 font-bold text-center mb-2">
+    <Background text="Arquitectura y Organización de Computadoras">
+      <SubText>
         ¿Qué es la arquitectura de computadoras?
-      </h1>
-      <p className="text-lg text-gray-700 mb-4 text-justify">
+      </SubText>
+      <Parrafo>
         La arquitectura de computadoras se refiere al conjunto de atributos
         visibles para el programador. Es decir, cómo una computadora está
         diseñada para ejecutar instrucciones, manejar datos, y comunicarse con
@@ -46,39 +48,39 @@ const ArchitectureOrganization = () => {
         <p className="mt-2 mb-2">
           <strong>Incluye aspectos como:</strong>
         </p>
-        <ul className="list-decimal list-inside text-gray-700 space-y-2">
+        <ListDisc>
           <li>El conjunto de instrucciones que reconoce el procesador. </li>
           <li>Los tipos de datos que puede manejar. </li>
           <li>
             La manera en la que se accede a la memoria y los registros (modos de
             direccionamiento).
           </li>
-        </ul>
+        </ListDisc>
         <p className="mt-2 mb-2">
           <strong>Ejemplo:</strong> Un programador necesita saber cómo usar
           registros, qué instrucciones están disponibles y cómo acceder a la
           memoria, pero no necesita conocer los transistores que lo hacen
           posible.
         </p>
-      </p>
+      </Parrafo>
 
-      <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4 text-center">
+      <SubText>
         ¿Qué es la organización de computadoras?
-      </h2>
-      <h3 className="text-md font-bold text-gray-600 mb-5">
+      </SubText>
+      <TinyText>
         La organización de computadoras se refiere a la implementación física de
         la arquitectura. Esto incluye todos los detalles de hardware:
-      </h3>
-      <ul className="list-disc list-inside text-gray-700 space-y-2">
+      </TinyText>
+      <ListDisc>
         <li>Cómo se construyen y conectan los componentes internos.</li>
         <li>Qué tecnologías se usan (por ejemplo, CMOS).</li>
         <li>Cómo se sincronizan las operaciones internas.</li>
         <li>Cómo fluye la información a través del sistema.</li>
-      </ul>
+      </ListDisc>
 
-      <p className="text-2xl font-bold text-blue-800 mt-6 mb-4 text-center">
+      <SubText>
         Diferencia entre arquitectura y organización
-      </p>
+      </SubText>
 
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="table">
@@ -106,11 +108,11 @@ const ArchitectureOrganization = () => {
         </Table>
       </TableContainer>
 
-      <p className="text-2xl font-bold text-blue-800 mt-6 mb-4 text-center">
+      <SubText>
         Subdivisiones de la organización:
-      </p>
+      </SubText>
 
-      <ul className="list-decimal list-inside text-gray-700 space-y-2">
+      <ListDecimal>
         <li className="font-bold text-xl">Estructura:</li>
         <p className="text-md">
           Describe los componentes físicos principales que conforman un sistema
@@ -165,7 +167,7 @@ const ArchitectureOrganization = () => {
           Las funciones se combinan para ejecutar el ciclo de instrucción, que
           es el núcleo del procesamiento digital.
         </p>
-      </ul>
+      </ListDecimal>
     </Background>
   );
 };

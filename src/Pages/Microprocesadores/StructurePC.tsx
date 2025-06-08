@@ -6,6 +6,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import ListDecimal from "@components/Base/ListDecimal";
+import ListDisc from "@components/Base/ListDisc";
+import Parrafo from "@components/Base/Parrafo";
+import SubText from "@components/Base/SubText";
+import TinyText from "@components/Base/TinyText";
 
 const StructurePC = () => {
   function createData(
@@ -52,35 +57,28 @@ const StructurePC = () => {
   ];
   return (
     <div>
-      <Background>
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
-          Estructura de la Computadora
-        </h1>
-        <h1 className="text-2xl text-blue-900 font-bold text-center mb-2">
-          ¿Qué es la estructura de una computadora?
-        </h1>
-        <p className="text-lg text-gray-700 mb-4 text-justify">
+      <Background text="Estructura de la Computadora">
+        <SubText>¿Qué es la estructura de una computadora?</SubText>
+        <Parrafo>
           La estructura de una computadora describe cómo están organizados sus
           componentes físicos fundamentales. A pesar de que hoy existen diversos
           tipos de computadoras (PCs, servidores, dispositivos embebidos), todas
           comparten una arquitectura base compuesta por:
-        </p>
-        <ul className="list-decimal text-lg font-bold list-inside text-gray-700 space-y-2 mb-5">
+        </Parrafo>
+        <ListDecimal>
           <li>Unidad de procesamiento (CPU)</li>
           <li>Memoria</li>
           <li>Dispositivos de entrada/salida (E/S)</li>
           <li>Buses (canales de comunicación)</li>
-        </ul>
-        <p className="text-lg text-gray-700 mb-4 text-justify">
+        </ListDecimal>
+        <TinyText>
           Este modelo general es conocido como la arquitectura de Von Neumann,
           que sigue vigente como principio en la mayoría de sistemas digitales
           modernos.
-        </p>
+        </TinyText>
 
-        <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4 text-center">
-          Partes de la estructura de una computadora
-        </h2>
-        <ul className="list-decimal list-inside text-gray-700 space-y-2">
+        <SubText>Partes de la estructura de una computadora</SubText>
+        <ListDecimal>
           <li className="font-bold text-lg">
             <strong>Procesamiento: la CPU</strong>
           </li>
@@ -200,12 +198,10 @@ const StructurePC = () => {
               (lectura, escritura, reloj, interrupciones).
             </li>
           </ul>
-        </ul>
-        <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4 text-center">
-          Modelo Von Neumann
-        </h2>
-        <p className="text-gray-600 font-bold mb-2">Este modelo, propuesto en 1945, plantea que:</p>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
+        </ListDecimal>
+        <SubText>Modelo Von Neumann</SubText>
+        <TinyText>Este modelo, propuesto en 1945, plantea que:</TinyText>
+        <ListDisc>
           <li>El programa y los datos se almacenan en la misma memoria.</li>
           <li>
             La CPU obtiene instrucciones desde la memoria y las ejecuta
@@ -215,7 +211,7 @@ const StructurePC = () => {
             Hay un único camino entre CPU y memoria, lo cual puede generar
             cuellos de botella (llamado "Von Neumann Bottleneck").
           </li>
-        </ul>
+        </ListDisc>
       </Background>
     </div>
   );
