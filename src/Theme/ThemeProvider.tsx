@@ -1,37 +1,49 @@
-import { createContext, useContext, useEffect, useState, ReactNode } from "react"
-import { ThemeProvider as MuiThemeProvider, createTheme } from "@mui/material/styles"
-import CssBaseline from "@mui/material/CssBaseline"
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from "react";
+import {
+  ThemeProvider as MuiThemeProvider,
+  createTheme,
+} from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 
-type Theme = "light" | "dark"
+type Theme = "light" | "dark";
 
 const ThemeContext = createContext<{ theme: Theme; toggleTheme: () => void }>({
   theme: "light",
   toggleTheme: () => {},
-})
+});
 
-export const useThemeContext = () => useContext(ThemeContext)
+export const useThemeContext = () => useContext(ThemeContext);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
-    return (localStorage.getItem("theme") as Theme) || "light"
-  })
+    return (localStorage.getItem("theme") as Theme) || "light";
+  });
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
-    setTheme(newTheme)
-    localStorage.setItem("theme", newTheme)
-  }
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
   useEffect(() => {
-    const root = document.documentElement
-    root.classList.toggle("dark", theme === "dark")
-  }, [theme])
+    if (theme === "dark") {
+      document.querySelector("html")!.setAttribute("data-theme", "dark");
+    } else {
+      document.querySelector("html")!.removeAttribute("data-theme");
+    }
+  }, [theme]);
 
   const muiTheme = createTheme({
     palette: {
       mode: theme,
     },
-  })
+  });
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -40,5 +52,5 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         {children}
       </MuiThemeProvider>
     </ThemeContext.Provider>
-  )
+  );
 }

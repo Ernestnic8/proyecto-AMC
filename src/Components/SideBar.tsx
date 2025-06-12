@@ -42,13 +42,13 @@ export default function Sidebar({ children }: { children: ReactNode }) {
           <div className="flex gap-2">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-1.5 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600"
+              className="p-1.5 rounded-lg bg-blue-700 dark:bg-gray-700 hover:bg-blue-600 dark:hover:bg-gray-600"
             >
               {darkMode ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             <button
               onClick={() => setExpanded((curr) => !curr)}
-              className="p-1.5 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600"
+              className="p-1.5 rounded-lg bg-blue-700 dark:bg-gray-700 hover:bg-blue-600 dark:hover:bg-gray-600"
             >
               {expanded ? <ChevronFirst /> : <ChevronLast />}
             </button>
