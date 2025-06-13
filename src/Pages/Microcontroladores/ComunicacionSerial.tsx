@@ -1,9 +1,7 @@
 import Background from "@components/Base/Background";
-import ListDecimal from "@components/Base/ListDecimal";
 import ListDisc from "@components/Base/ListDisc";
 import Parrafo from "@components/Base/Parrafo";
 import SubText from "@components/Base/SubText";
-import TinyText from "@components/Base/TinyText";
 
 const ComunicaciónSerial = () => {
 return (

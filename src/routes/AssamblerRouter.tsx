@@ -6,7 +6,7 @@ const AssamblerRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Assambler />} />
-      <Route path="/instrucciones" element={<Instruccion />} />
+      <Route path="/instruccion" element={<Instruccion />} />
     </Routes>
   );
 };
