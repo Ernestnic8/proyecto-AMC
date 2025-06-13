@@ -8,9 +8,7 @@ import TinyText from "@components/Base/TinyText";
 const ExecutionCycle = () => {
   return (
     <Background text="Ciclo de Ejecución de una Instrucción">
-      <SubText>
-        ¿Qué es el ciclo de instrucción?
-      </SubText>
+      <SubText>¿Qué es el ciclo de instrucción?</SubText>
       <Parrafo>
         El ciclo de instrucción (o ciclo de máquina) es el proceso completo que
         realiza un microprocesador para leer, interpretar y ejecutar una
@@ -20,9 +18,7 @@ const ExecutionCycle = () => {
         esté encendido. Se trata del corazón del procesamiento digital.
       </Parrafo>
 
-      <SubText>
-        Etapas del ciclo de instrucción
-      </SubText>
+      <SubText>Etapas del ciclo de instrucción</SubText>
       <Parrafo>
         El ciclo básico está compuesto por cuatro fases principales:
       </Parrafo>
@@ -30,56 +26,69 @@ const ExecutionCycle = () => {
       <ListDecimal>
         <li className="font-bold">Búsqueda (Fetch) </li>
         <p>El procesador obtiene la instrucción desde la memoria principal.</p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>
-            La dirección de la instrucción se encuentra en el Program Counter
-            (PC).
-          </li>
-          <li>Se envía esta dirección a través del bus de direcciones.</li>
-          <li>
-            La instrucción viaja por el bus de datos y se almacena en el
-            Instruction Register (IR).
-          </li>
-        </ul>
+        <div className="pl-6">
+          <ListDisc>
+            <li>
+              La dirección de la instrucción se encuentra en el Program Counter
+              (PC).
+            </li>
+            <li>Se envía esta dirección a través del bus de direcciones.</li>
+            <li>
+              La instrucción viaja por el bus de datos y se almacena en el
+              Instruction Register (IR).
+            </li>
+          </ListDisc>
+        </div>
 
         <li className="font-bold">Decodificación (Decode) </li>
         <p>La Unidad de Control interpreta la instrucción cargada en el IR.</p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>
-            Se identifica el tipo de instrucción (aritmética, lógica, salto,
-            etc.).
-          </li>
-          <li>Se determinan los operandos involucrados.</li>
-          <li>Se preparan las señales de control para la ejecución.</li>
-        </ul>
+        <div className="pl-6">
+          <ListDisc>
+            <li>
+              Se identifica el tipo de instrucción (aritmética, lógica, salto,
+              etc.).
+            </li>
+            <li>Se determinan los operandos involucrados.</li>
+            <li>Se preparan las señales de control para la ejecución.</li>
+          </ListDisc>
+        </div>
 
         <li className="font-bold">Ejecución (Execute) </li>
         <p>El procesador realiza la operación indicada.</p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>
-            La ALU puede realizar una suma, resta, lógica booleana, comparación,
-            etc
-          </li>
-          <li>Puede haber transferencias entre registros</li>
-          <li>Se realizan accesos a memoria o a puertos de E/S</li>
-          <li>Se modifican banderas y registros especiales</li>
-        </ul>
+        <div className="pl-6">
+          <ListDisc>
+            <li>
+              La ALU puede realizar una suma, resta, lógica booleana,
+              comparación, etc
+            </li>
+            <li>Puede haber transferencias entre registros</li>
+            <li>Se realizan accesos a memoria o a puertos de E/S</li>
+            <li>Se modifican banderas y registros especiales</li>
+          </ListDisc>
+        </div>
 
         <li className="font-bold">Escritura de resultados (Write-back) </li>
         <p>
           Se almacenan los resultados de la ejecución en su destino
           correspondiente
         </p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>Puede implicar:</li>
-          <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-            <li>
-              Escribir en un registro (ej. guardar el resultado de una suma).
-            </li>
-            <li>Escribir en la memoria (ej. almacenar datos calculados).</li>
-          </ul>
-          <li>Se actualiza el PC para apuntar a la próxima instrucción.</li>
-        </ul>
+        <div className="pl-6">
+          <ListDisc>
+            <li>Puede implicar:</li>
+            <div className="pl-6">
+              <ListDisc>
+                <li>
+                  Escribir en un registro (ej. guardar el resultado de una
+                  suma).
+                </li>
+                <li>
+                  Escribir en la memoria (ej. almacenar datos calculados).
+                </li>
+              </ListDisc>
+            </div>
+            <li>Se actualiza el PC para apuntar a la próxima instrucción.</li>
+          </ListDisc>
+        </div>
 
         <p className="text-xl mt-6 font-bold text-blue-700 mb-6 text-center">
           Rendimiento del ciclo
@@ -98,9 +107,7 @@ const ExecutionCycle = () => {
         </li>
       </ListDisc>
 
-      <TinyText>
-        Los procesadores modernos implementan técnicas como:
-      </TinyText>
+      <TinyText>Los procesadores modernos implementan técnicas como:</TinyText>
       <ListDisc>
         <li>
           Pipeline: divide el ciclo de instrucción en etapas que se ejecutan en

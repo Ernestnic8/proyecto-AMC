@@ -8,9 +8,7 @@ import TinyText from "@components/Base/TinyText";
 const Buses = () => {
   return (
     <Background text="Buses del Sistema">
-      <SubText>
-        ¿Qué es un bus en arquitectura de computadoras?
-      </SubText>
+      <SubText>¿Qué es un bus en arquitectura de computadoras?</SubText>
       <Parrafo>
         Un bus es un canal de comunicación que permite la transferencia de
         datos, direcciones y señales de control entre los distintos componentes
@@ -21,9 +19,7 @@ const Buses = () => {
         sincronizada y eficiente.
       </Parrafo>
 
-      <TinyText>
-        Tipos principales de buses
-      </TinyText>
+      <TinyText>Tipos principales de buses</TinyText>
       <ListDecimal>
         <li className="font-bold">Bus de Datos</li>
         <p>Transporta la información real que se mueve dentro del sistema.</p>
@@ -54,13 +50,15 @@ const Buses = () => {
           Transporta las ubicaciones (direcciones) de memoria o de puertos donde
           se desea leer o escribir datos
         </p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>
-            Es unidireccional, desde la CPU hacia la memoria o periféricos.
-          </li>
-          <li>Indica “dónde” se encuentra la información en el sistema.</li>
-          <li>Su ancho define la cantidad máxima de memoria direccionable</li>
-        </ul>
+        <div className="pl-6">
+          <ListDisc>
+            <li>
+              Es unidireccional, desde la CPU hacia la memoria o periféricos.
+            </li>
+            <li>Indica “dónde” se encuentra la información en el sistema.</li>
+            <li>Su ancho define la cantidad máxima de memoria direccionable</li>
+          </ListDisc>
+        </div>
         <p className="font-bold">Ejemplo:</p>
         <p>
           Un bus de direcciones de 16 bits puede direccionar hasta 2¹⁶ = 65,536
@@ -74,16 +72,18 @@ const Buses = () => {
           coordinar el funcionamiento del sistema.
         </p>
         <p className="font-bold">Funciones clave:</p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>Indicar si la operación es de lectura o escritura</li>
-          <li>
-            Gestionar señales de reloj, interrupciones, estado, reset, etc.
-          </li>
-          <li>
-            Permitir o denegar el acceso al bus mediante mecanismos de
-            arbitraje.
-          </li>
-        </ul>
+        <div className="pl-6">
+          <ListDisc>
+            <li>Indicar si la operación es de lectura o escritura</li>
+            <li>
+              Gestionar señales de reloj, interrupciones, estado, reset, etc.
+            </li>
+            <li>
+              Permitir o denegar el acceso al bus mediante mecanismos de
+              arbitraje.
+            </li>
+          </ListDisc>
+        </div>
         <p className="font-bold">Ejemplos de señales comunes:</p>
         <p className="pl-6">
           <strong>RD (Read): </strong>
@@ -102,9 +102,7 @@ const Buses = () => {
         </p>
       </ListDecimal>
 
-      <SubText>
-        Diagrama logico simplicado
-      </SubText>
+      <SubText>Diagrama logico simplicado</SubText>
       <div className="flex justify-center mb-6">
         <img src="/image/busesData.png" alt="diagrama" className="max-w-100" />
       </div>
@@ -120,9 +118,7 @@ const Buses = () => {
         </li>
       </ListDisc>
 
-      <SubText>
-        Importancia del sistema de buses
-      </SubText>
+      <SubText>Importancia del sistema de buses</SubText>
       <ListDisc>
         <li>
           Permite que múltiples componentes se comuniquen sin necesidad de
@@ -134,9 +130,7 @@ const Buses = () => {
         </li>
       </ListDisc>
 
-      <SubText>
-        Limitaciones y soluciones
-      </SubText>
+      <SubText>Limitaciones y soluciones</SubText>
       <ListDisc>
         <li>
           <strong>Cuello de botella (bottleneck): </strong> si varios
