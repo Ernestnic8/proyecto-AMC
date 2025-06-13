@@ -264,6 +264,11 @@ const App = () => {
             />
           </SidebarItem>
           <SidebarItem
+            icon={<Terminal fontSize="small" />}
+            text="Lenguaje Arduino"
+            to="/arduino"
+          />
+          <SidebarItem
             icon={<Recommend fontSize="small" />}
             text="Recomendaciones"
             to="/recomendaciones"
