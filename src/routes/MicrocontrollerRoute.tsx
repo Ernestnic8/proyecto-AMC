@@ -14,7 +14,7 @@ const MicrocontrollerRoute = () => {
       <Route path="/comunicacion" element={<ComunicaciónSerial/>} />
       <Route path="/puerto-io" element={<PuertosIO/>} />
       <Route path="/estructura" element={<StructureMC/>} />
-      <Route path="/temporizadores-control" element={<TemporizadoresControl/>} />
+      <Route path="/temporizadores-contadores" element={<TemporizadoresControl/>} />
     </Routes>
   );
 };

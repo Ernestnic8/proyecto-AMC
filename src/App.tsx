@@ -10,6 +10,12 @@ import {
   Storage,
   Autorenew,
   CompareArrows,
+  IntegrationInstructions,
+  AccountTree,
+  Apps,
+  Timelapse,
+  Cable,
+  Nat,
 } from "@mui/icons-material";
 import AmcRouter from "./routes/AmcRouter";
 import { Terminal } from "lucide-react";
@@ -139,7 +145,12 @@ const App = () => {
             icon={<DeveloperBoard fontSize="small" />}
             text="Microcontroladores"
             subRoutes={[
-              "/raw/ventajas-y-des",
+              "/microcontroladores/",
+              "/microcontroladores/aplicaciones",
+              "/microcontroladores/comunicacion",
+              "/microcontroladores/puerto-io",
+              "/microcontroladores/estructura",
+              "/microcontroladores/temporizadores-contadores",
             ]}
           >
             <SidebarItem
@@ -160,7 +171,42 @@ const App = () => {
                 </svg>
               }
               text="Introduccion"
-              to="/microprocesadores"
+              to="/microcontroladores"
+            />
+            <SidebarItem
+              icon={
+                <AccountTree fontSize="small" />
+              }
+              text="Estructura General"
+              to="/microcontroladores/Estructura"
+            />
+            <SidebarItem
+              icon={
+                <Timelapse fontSize="small" />
+              }
+              text="Temporizadores y Contadores"
+              to="/microcontroladores/temporizadores-contadores"
+            />
+            <SidebarItem
+              icon={
+                <Cable fontSize="small" />
+              }
+              text="Puertos IO"
+              to="/microcontroladores/puerto-io"
+            />
+            <SidebarItem
+              icon={
+                <Nat fontSize="small" />
+              }
+              text="Comunicacion Serial"
+              to="/microcontroladores/comunicacion"
+            />
+            <SidebarItem
+              icon={
+                <Apps fontSize="small" />
+              }
+              text="Applicaciones"
+              to="/microcontroladores/aplicaciones"
             />
           </SidebarItem>
           <SidebarItem
@@ -213,6 +259,20 @@ const App = () => {
               }
               text="¿Que es?"
               to="/ensamblador"
+            />
+            <SidebarItem
+              icon={
+                <IntegrationInstructions fontSize="small" />
+              }
+              text="Instrucciones"
+              to="/ensamblador/instruccion"
+            />
+            <SidebarItem
+              icon={
+                <AccountTree fontSize="small" />
+              }
+              text="Estructuras de Control"
+              to="/ensamblador/estructura-control"
             />
           </SidebarItem>
         </Sidebar>
