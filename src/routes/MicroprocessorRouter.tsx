@@ -3,10 +3,10 @@ import Buses from "@pages/Microprocesadores/Buses";
 import DirectionMode from "@pages/Microprocesadores/DirectionMode";
 import ExecutionCycle from "@pages/Microprocesadores/ExecutionCycle";
 import InternalArchitecture from "@pages/Microprocesadores/InternalArchitecture";
+import Interruptions from "@pages/Microprocesadores/Interruptions";
 import Introduction from "@pages/Microprocesadores/Introduction";
 import Registros from "@pages/Microprocesadores/Registros";
 import StructurePC from "@pages/Microprocesadores/StructurePC";
-import Assambler from "@pages/ProgrammingLanguaje/Assembler";
 import { Route, Routes } from "react-router-dom";
 
 const MicroprocessorRouter = () => {
@@ -20,7 +20,7 @@ const MicroprocessorRouter = () => {
       <Route path="/buses" element={<Buses />} />
       <Route path="/ciclo-ejecucion" element={<ExecutionCycle />} />
       <Route path="/modo-direccion" element={<DirectionMode />} />
-      <Route path="/ensamblador" element={<Assambler />} />
+      <Route path="/interrupciones" element={<Interruptions />} />
     </Routes>
   );
 };

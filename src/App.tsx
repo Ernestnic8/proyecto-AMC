@@ -18,6 +18,7 @@ import {
   Nat,
   Article,
   Recommend,
+  Block,
 } from "@mui/icons-material";
 import AmcRouter from "./routes/AmcRouter";
 import { Terminal } from "lucide-react";
@@ -39,6 +40,9 @@ const App = () => {
               "/microprocesadores/registros",
               "/microprocesadores/buses",
               "/microprocesadores/ciclo-ejecucion",
+              "/microprocesadores/modo-direccion",
+              "/microprocesadores/interrupciones",
+
             ]}
           >
             <SidebarItem
@@ -141,6 +145,11 @@ const App = () => {
               icon={<CompareArrows fontSize="small" />}
               text="Modo de Dirección"
               to="/microprocesadores/modo-direccion"
+            />
+            <SidebarItem
+              icon={<Block fontSize="small" />}
+              text="Interrupciones"
+              to="/microprocesadores/interrupciones"
             />
           </SidebarItem>
           <SidebarItem
