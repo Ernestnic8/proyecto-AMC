@@ -121,7 +121,7 @@ const ArchitectureOrganization = () => {
         </p>
         <p className="text-xl">Principales elementos:</p>
 
-        <ul className="list-disc list-inside text-gray-600 space-y-2 px-10">
+        <ListDisc>
           <li>
             <strong>Unidad Central de Procesamiento (CPU):</strong> Controla y
             ejecuta instrucciones.
@@ -137,7 +137,7 @@ const ArchitectureOrganization = () => {
             <strong>Buses:</strong> Vías de comunicación entre CPU, memoria y
             periféricos.
           </li>
-        </ul>
+        </ListDisc>
         <p>
           Esta visión es útil cuando se diseña un sistema digital, como un
           microprocesador personalizado o un sistema embebido.
@@ -149,7 +149,7 @@ const ArchitectureOrganization = () => {
           propósito.
         </p>
         <p>Ejemplos:</p>
-        <ul className="list-disc list-inside text-gray-600 space-y-2 px-10">
+        <ListDisc>
           <li>
             La memoria almacena información binaria y la entrega cuando la CPU
             la necesita.
@@ -162,7 +162,7 @@ const ArchitectureOrganization = () => {
             Los dispositivos de entrada/salida envían o reciben información
             desde y hacia el entorno.
           </li>
-        </ul>
+        </ListDisc>
         <p className="font-bold text-md">
           Las funciones se combinan para ejecutar el ciclo de instrucción, que
           es el núcleo del procesamiento digital.

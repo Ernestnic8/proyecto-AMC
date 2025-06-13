@@ -23,14 +23,16 @@ const InternalArchitecture = () => {
         <li className="font-bold">Unidad de Control (Control Unit - CU) </li>
         <p>Es el “director de orquesta” del microprocesador.</p>
         <p className="font-bold">Funciones:</p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>Coordina la ejecución de instrucciones..</li>
-          <li>Genera señales de control para activar otras unidades.</li>
-          <li>
-            Interpreta el código de operación (opcode) de cada instrucción.
-          </li>
-          <li>Controla la lectura/escritura de registros y memoria.</li>
-        </ul>
+        <div className="pl-6">
+          <ListDisc>
+            <li>Coordina la ejecución de instrucciones..</li>
+            <li>Genera señales de control para activar otras unidades.</li>
+            <li>
+              Interpreta el código de operación (opcode) de cada instrucción.
+            </li>
+            <li>Controla la lectura/escritura de registros y memoria.</li>
+          </ListDisc>
+        </div>
         <p className="font-bold">Importancia:</p>
         <p>
           La unidad de control asegura que cada componente actúe en el momento
@@ -39,15 +41,19 @@ const InternalArchitecture = () => {
         <li className="font-bold">Unidad Aritmético-Lógica (ALU)</li>
         <p>Es el “calculador” del microprocesador.</p>
         <p className="font-bold">Funciones:</p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>Realiza operaciones aritméticas: suma, resta, incremento, etc</li>
-          <li>Realiza operaciones lógicas: AND, OR, XOR, NOT.</li>
-          <li>Manipula datos binarios a nivel de bit.</li>
-          <li>
-            Genera banderas o indicadores (flags) como Cero, Acarreo, Negativo,
-            Desbordamiento.
-          </li>
-        </ul>
+        <div className="pl-6">
+          <ListDisc>
+            <li>
+              Realiza operaciones aritméticas: suma, resta, incremento, etc
+            </li>
+            <li>Realiza operaciones lógicas: AND, OR, XOR, NOT.</li>
+            <li>Manipula datos binarios a nivel de bit.</li>
+            <li>
+              Genera banderas o indicadores (flags) como Cero, Acarreo,
+              Negativo, Desbordamiento.
+            </li>
+          </ListDisc>
+        </div>
         <p className="font-bold">Ejemplo práctico:</p>
         <p>
           Una instrucción como ADD A, B suma los contenidos de los registros A y
@@ -59,33 +65,38 @@ const InternalArchitecture = () => {
           dentro del microprocesador.
         </p>
         <p className="font-bold">Tipos de registros:</p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>
-            <strong>Registros de propósito general:</strong> almacenan
-            temporalmente datos durante las operaciones (por ejemplo, AX, BX,
-            R0, R1).
-          </li>
-          <li>
-            <strong>Registros de propósito específico:</strong>
-          </li>
-          <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
+        <div className="pl-6">
+          <ListDisc>
             <li>
-              <strong>PC (Program Counter): </strong>guarda la dirección de la
-              próxima instrucción a ejecutar.
+              <strong>Registros de propósito general:</strong> almacenan
+              temporalmente datos durante las operaciones (por ejemplo, AX, BX,
+              R0, R1).
             </li>
             <li>
-              <strong>IR (Instruction Register): </strong>contiene la
-              instrucción actual que se está ejecutando.
+              <strong>Registros de propósito específico:</strong>
             </li>
-            <li>
-              <strong>SP (Stack Pointer):</strong> apunta a la cima de la pila.
-            </li>
-            <li>
-              <strong>Registro de estado o flags:</strong> contiene indicadores
-              del resultado de operaciones.
-            </li>
-          </ul>
-        </ul>
+            <div className="pl-6">
+              <ListDisc>
+                <li>
+                  <strong>PC (Program Counter): </strong>guarda la dirección de
+                  la próxima instrucción a ejecutar.
+                </li>
+                <li>
+                  <strong>IR (Instruction Register): </strong>contiene la
+                  instrucción actual que se está ejecutando.
+                </li>
+                <li>
+                  <strong>SP (Stack Pointer):</strong> apunta a la cima de la
+                  pila.
+                </li>
+                <li>
+                  <strong>Registro de estado o flags:</strong> contiene
+                  indicadores del resultado de operaciones.
+                </li>
+              </ListDisc>
+            </div>
+          </ListDisc>
+        </div>
         <p className="font-bold">Interconexiones internas</p>
         <p>
           Permiten al procesador trabajar con datos sin necesidad de acceder
@@ -94,16 +105,18 @@ const InternalArchitecture = () => {
         <li className="font-bold">Registros Internos</li>
         <p>Es la “red interna” del microprocesador</p>
         <p className="font-bold">Incluye::</p>
-        <ul className="list-disc list-inside pl-6 text-gray-700 space-y-2">
-          <li>
-            Buses internos que conectan los registros, ALU, unidad de control, y
-            puertos de entrada/salida.
-          </li>
-          <li>
-            Multiplexores, decodificadores, y lógica de control que enruta los
-            datos correctamente.
-          </li>
-        </ul>
+        <div className="pl-6">
+          <ListDisc>
+            <li>
+              Buses internos que conectan los registros, ALU, unidad de control,
+              y puertos de entrada/salida.
+            </li>
+            <li>
+              Multiplexores, decodificadores, y lógica de control que enruta los
+              datos correctamente.
+            </li>
+          </ListDisc>
+        </div>
         <p>
           Estas interconexiones permiten la transferencia eficiente de
           información entre los bloques funcionales del microprocesador.

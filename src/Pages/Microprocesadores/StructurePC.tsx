@@ -82,40 +82,40 @@ const StructurePC = () => {
           <li className="font-bold text-lg">
             <strong>Procesamiento: la CPU</strong>
           </li>
-          <p className="text-gray-700 mb-4 text-justify">
+          <Parrafo>
             La Unidad Central de Procesamiento (CPU) es el componente principal
             de cualquier sistema computacional. Su función es ejecutar
             instrucciones, coordinar la operación del sistema y procesar datos.{" "}
             <br /> <br />
             Componentes clave de la CPU:
-          </p>
-          <ul className="list-disc list-inside pl-10 text-gray-700 space-y-2">
-            <li>
-              <strong>Unidad de Control (CU):</strong>Dirige el flujo de datos,
-              interpreta instrucciones y coordina al resto del sistema.
-            </li>
-            <li>
-              <strong>Unidad Aritmética Lógica (ALU):</strong>Realiza
-              operaciones matemáticas y lógicas.
-            </li>
-            <li>
-              Registros: Memoria interna de alta velocidad para datos
-              temporales.
-            </li>
-          </ul>
+          </Parrafo>
+          <div className="pl-10">
+            <ListDisc>
+              <li>
+                <strong>Unidad de Control (CU):</strong>Dirige el flujo de
+                datos, interpreta instrucciones y coordina al resto del sistema.
+              </li>
+              <li>
+                <strong>Unidad Aritmética Lógica (ALU):</strong>Realiza
+                operaciones matemáticas y lógicas.
+              </li>
+              <li>
+                Registros: Memoria interna de alta velocidad para datos
+                temporales.
+              </li>
+            </ListDisc>
+          </div>
           <li className="font-bold mt-4 text-lg">
             <strong>Sistema de Memoria</strong>
           </li>
 
-          <p className="text-gray-700 mb-4 text-justify">
+          <Parrafo>
             La memoria es responsable de almacenar temporal o permanentemente
             los datos y programas necesarios para el funcionamiento del sistema.
             Se organiza en niveles jerárquicos, según su velocidad, costo y
             capacidad.
-          </p>
-          <p className="text-gray-700 font-black mb-4 text-justify">
-            Tipos de memoria:
-          </p>
+          </Parrafo>
+          <TinyText>Tipos de memoria:</TinyText>
 
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="table">
@@ -147,35 +147,39 @@ const StructurePC = () => {
             </Table>
           </TableContainer>
           <li className="font-bold text-lg">Sistema de Entrada/Salida (E/S)</li>
-          <p className="text-gray-700 mb-4 text-justify">
+          <Parrafo>
             Los dispositivos de entrada/salida permiten la interacción entre la
             computadora y su entorno.
-          </p>
+          </Parrafo>
           <p className="font-bold">Se clasifican como:</p>
-          <ul className="list-disc list-inside pl-10 text-gray-700 space-y-2">
-            <li>
-              <strong>Entrada:</strong>teclado, mouse, sensores, cámaras.
-            </li>
-            <li>
-              <strong>Salida:</strong>monitor, impresora, actuadores.
-            </li>
-            <li>
-              <strong>Entrada/Salida:</strong> discos duros, memorias USB,
-              pantallas táctiles.
-            </li>
-          </ul>
+          <div className="pl-10">
+            <ListDisc>
+              <li>
+                <strong>Entrada:</strong>teclado, mouse, sensores, cámaras.
+              </li>
+              <li>
+                <strong>Salida:</strong>monitor, impresora, actuadores.
+              </li>
+              <li>
+                <strong>Entrada/Salida:</strong> discos duros, memorias USB,
+                pantallas táctiles.
+              </li>
+            </ListDisc>
+          </div>
           <p className="font-semibold">Funciones del sistema E/S:</p>
-          <ul className="list-disc list-inside pl-10 text-gray-700 space-y-2">
-            <li>Enviar/recibir datos hacia o desde el exterior.</li>
-            <li>
-              Convertir señales externas en un formato entendible por el
-              sistema.
-            </li>
-            <li>
-              Coordinar la transferencia de información mediante controladores y
-              buffers.
-            </li>
-          </ul>
+          <div className="pl-10">
+            <ListDisc>
+              <li>Enviar/recibir datos hacia o desde el exterior.</li>
+              <li>
+                Convertir señales externas en un formato entendible por el
+                sistema.
+              </li>
+              <li>
+                Coordinar la transferencia de información mediante controladores
+                y buffers.
+              </li>
+            </ListDisc>
+          </div>
           <li className="font-bold text-lg text-justify">
             Interconexión: los Buses
           </li>
@@ -184,20 +188,22 @@ const StructurePC = () => {
             componentes de la computadora. <br />{" "}
             <strong>Funciones básicas:</strong>
           </p>
-          <ul className="list-disc list-inside pl-10 text-gray-700 space-y-2">
-            <li>
-              <strong>Bus de datos:</strong>transporta la información (valores
-              binarios).
-            </li>
-            <li>
-              <strong>transporta la información (valores binarios).</strong>
-              indica la ubicación en memoria.
-            </li>
-            <li>
-              <strong>Bus de control:</strong>transmite señales de control
-              (lectura, escritura, reloj, interrupciones).
-            </li>
-          </ul>
+          <div className="pl-10">
+            <ListDisc>
+              <li>
+                <strong>Bus de datos:</strong>transporta la información (valores
+                binarios).
+              </li>
+              <li>
+                <strong>transporta la información (valores binarios).</strong>
+                indica la ubicación en memoria.
+              </li>
+              <li>
+                <strong>Bus de control:</strong>transmite señales de control
+                (lectura, escritura, reloj, interrupciones).
+              </li>
+            </ListDisc>
+          </div>
         </ListDecimal>
         <SubText>Modelo Von Neumann</SubText>
         <TinyText>Este modelo, propuesto en 1945, plantea que:</TinyText>
