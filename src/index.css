@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([class=dark], [class=dark] *));
+
 html,
 body {
   height: 100%;
+  
 }
