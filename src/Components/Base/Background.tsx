@@ -1,12 +1,11 @@
 import { ReactNode } from "react";
 
-const Background = ({
-  children,
-  text,
-}: {
+interface IBackground {
   children: ReactNode;
   text: string;
-}) => {
+}
+
+const Background = ({ children, text }: IBackground) => {
   return (
     <div className="min-h-screen bg-white/60 dark:bg-black/50 flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8 rounded-lg">
       <div className="w-full max-w-4xl bg-white/65 dark:bg-black/55 p-6 sm:p-8 rounded-2xl shadow-xl backdrop-blur-lg">

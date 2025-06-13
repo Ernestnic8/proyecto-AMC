@@ -1,18 +1,28 @@
 import Background from "@components/Base/Background";
+import TinyText from "@components/Base/TinyText";
 
 const Inicio = () => {
   return (
-    <Background>
-      <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">
-        Bienvenido a la Guía de AMC 1
-      </h1>
-      <p className="text-lg text-gray-700 mb-6 text-center">
-        Este sitio fue creado para compartir información, apuntes y guías sobre
-        los temas que hemos visto en la clase de AMC 1 de la carrera de
-        Computación. Aquí encontrarás explicaciones accesibles sobre conceptos
-        como formato RAW, clonación de discos, diferencias entre UEFI y Legacy,
-        cómo usar el boot menu y mucho más.
-      </p>
+    <Background text="Guía de AMC 1 - Arquitectura de Máquinas">
+      <TinyText>
+        Bienvenido a este sitio educativo dedicado a los contenidos de la
+        asignatura <strong>Arquitectura de Máquinas I</strong> de la carrera de
+        Computación. Aquí encontrarás explicaciones accesibles y estructuradas
+        sobre temas clave como la{" "}
+        <strong>arquitectura interna de los microprocesadores</strong>, el
+        funcionamiento de los <strong>microcontroladores</strong>, la{" "}
+        <strong>programación en lenguaje ensamblador</strong>, el{" "}
+        <strong>manejo de interrupciones</strong> y las diferencias esenciales
+        entre hardware de propósito general y embebido.
+        <br />
+        <br />
+        Además, incluimos ejemplos prácticos, diagramas explicativos y guías
+        paso a paso para entender cómo interactúan los registros, buses,
+        temporizadores y puertos de E/S en sistemas digitales modernos. Esta
+        guía está pensada tanto para reforzar tus conocimientos teóricos como
+        para ayudarte en el desarrollo de proyectos reales de automatización,
+        domótica y electrónica aplicada.
+      </TinyText>
     </Background>
   );
 };
