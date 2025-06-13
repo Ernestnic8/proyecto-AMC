@@ -38,11 +38,11 @@ const Assambler = () => {
         interrupciones, la memoria y los dispositivos directamente
       </Parrafo>
       <SubText>Estructura básica de un programa en ensamblador</SubText>
-      <p className="text-gray-700 mb-2 text-lg pl-2">
+      <TinyText>
         Un programa típico en ensamblador está dividido en secciones:
-      </p>
+      </TinyText>
 
-      <p className="text-gray-700 font-serif mt-5 mb-3 font-bold text-md text-justify">
+      <Parrafo>
         SECTION .data ;Sección de datos (variables)
         <br />
         msg db 'Hola', 0
@@ -56,12 +56,12 @@ const Assambler = () => {
         MOV AX, 1 ; Cargar valor en registro
         <br />
         AX INT 80h ; Llamada al sistema (Linux)
-      </p>
-      <p className="text-gray-700 mt-5 mb-3 font-bold text-md text-justify">
+      </Parrafo>
+      <Parrafo>
         {" "}
         Partes comunes:
-      </p>
-      <ul className="list-disc list-inside text-gray-700 space-y-2 pl-5">
+      </Parrafo>
+      <ListDisc>
         <li>
           <strong>Etiquetas:</strong>
           puntos de referencia (por ejemplo, _start:).
@@ -77,7 +77,7 @@ const Assambler = () => {
           <strong>Comentarios:</strong>
           explicaciones que no afectan la ejecución (; en x86).
         </li>
-      </ul>
+      </ListDisc>
 
       <div className="text-center mt-8">
         <SubText>Ejemplos Funcionales del Lenguaje</SubText>

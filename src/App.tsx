@@ -16,6 +16,8 @@ import {
   Timelapse,
   Cable,
   Nat,
+  Article,
+  Recommend,
 } from "@mui/icons-material";
 import AmcRouter from "./routes/AmcRouter";
 import { Terminal } from "lucide-react";
@@ -174,37 +176,27 @@ const App = () => {
               to="/microcontroladores"
             />
             <SidebarItem
-              icon={
-                <AccountTree fontSize="small" />
-              }
+              icon={<AccountTree fontSize="small" />}
               text="Estructura General"
               to="/microcontroladores/Estructura"
             />
             <SidebarItem
-              icon={
-                <Timelapse fontSize="small" />
-              }
+              icon={<Timelapse fontSize="small" />}
               text="Temporizadores y Contadores"
               to="/microcontroladores/temporizadores-contadores"
             />
             <SidebarItem
-              icon={
-                <Cable fontSize="small" />
-              }
+              icon={<Cable fontSize="small" />}
               text="Puertos IO"
               to="/microcontroladores/puerto-io"
             />
             <SidebarItem
-              icon={
-                <Nat fontSize="small" />
-              }
+              icon={<Nat fontSize="small" />}
               text="Comunicacion Serial"
               to="/microcontroladores/comunicacion"
             />
             <SidebarItem
-              icon={
-                <Apps fontSize="small" />
-              }
+              icon={<Apps fontSize="small" />}
               text="Applicaciones"
               to="/microcontroladores/aplicaciones"
             />
@@ -261,20 +253,26 @@ const App = () => {
               to="/ensamblador"
             />
             <SidebarItem
-              icon={
-                <IntegrationInstructions fontSize="small" />
-              }
+              icon={<IntegrationInstructions fontSize="small" />}
               text="Instrucciones"
               to="/ensamblador/instruccion"
             />
             <SidebarItem
-              icon={
-                <AccountTree fontSize="small" />
-              }
+              icon={<AccountTree fontSize="small" />}
               text="Estructuras de Control"
               to="/ensamblador/estructura-control"
             />
           </SidebarItem>
+          <SidebarItem
+            icon={<Recommend fontSize="small" />}
+            text="Recomendaciones"
+            to="/recomendaciones"
+          />
+          <SidebarItem
+            icon={<Article fontSize="small" />}
+            text="Referencias"
+            to="/referencias"
+          />
         </Sidebar>
         <main className="flex-1 p-4 overflow-y-auto text-black dark:text-white">
           <AmcRouter />
