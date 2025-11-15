@@ -210,7 +210,7 @@ const App = () => {
               to="/microcontroladores/aplicaciones"
             />
           </SidebarItem>
-          <SidebarItem
+          {/* <SidebarItem
             icon={<Difference fontSize="small" />}
             text="Diferencias"
             subRoutes={["/mprocess-vs-mcontroller"]}
@@ -235,7 +235,7 @@ const App = () => {
               text="Diferencias"
               to="/mprocess-vs-mcontroller"
             />
-          </SidebarItem>
+          </SidebarItem> */}
           <SidebarItem
             icon={<Terminal fontSize="small" />}
             text="Lenguaje Ensamblador"
