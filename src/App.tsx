@@ -4,24 +4,16 @@ import { SidebarItem } from "./Components/SideBarItem";
 import {
   Home,
   Memory,
-  DeveloperBoard,
-  Difference,
-  SnippetFolder,
-  Storage,
-  Autorenew,
-  CompareArrows,
-  IntegrationInstructions,
-  AccountTree,
-  Apps,
-  Timelapse,
-  Cable,
-  Nat,
   Article,
-  Recommend,
-  Block,
+  Computer,
+  Devices,
+  AccountTree,
+  FastForward,
+  ControlCamera,
+  Dns,
+  Usb,  
 } from "@mui/icons-material";
 import AmcRouter from "./routes/AmcRouter";
-import { Terminal } from "lucide-react";
 
 const App = () => {
   return (
@@ -30,258 +22,63 @@ const App = () => {
         <Sidebar>
           <SidebarItem icon={<Home fontSize="small" />} text="Inicio" to="/" />
           <SidebarItem
-            icon={<Memory fontSize="small" />}
-            text="Microprocesadores"
+            icon={<Devices fontSize="small" />}
+            text="Unidades"
             subRoutes={[
-              "/microprocesadores",
-              "/microprocesadores/arquitectura",
-              "/microprocesadores/estructura-pc",
-              "/microprocesadores/estructura-interna",
-              "/microprocesadores/registros",
-              "/microprocesadores/buses",
-              "/microprocesadores/ciclo-ejecucion",
-              "/microprocesadores/modo-direccion",
-              "/microprocesadores/interrupciones",
-
+              "/unidades",
             ]}
           >
             <SidebarItem
               icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
-                  />
-                </svg>
+                <Computer fontSize="small" />
               }
-              text="Introduccion"
-              to="/microprocesadores"
+              text="Unidad 1"
+              to="/unidades/unidad-1"
             />
             <SidebarItem
               icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z"
-                  />
-                </svg>
+                <Memory fontSize="small" />
               }
-              text="Arquitectura y Organización"
-              to="/microprocesadores/arquitectura"
-            />
-
-            <SidebarItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-                  />
-                </svg>
-              }
-              text="Estructura de la PC"
-              to="/microprocesadores/estructura-pc"
+              text="Unidad 2"
+              to="/unidades/unidad-2"
             />
             <SidebarItem
               icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"
-                  />
-                </svg>
+                <AccountTree fontSize="small" />
               }
-              text="Estructura Interna"
-              to="/microprocesadores/estructura-interna"
+              text="Unidad 3"
+              to="/unidades/unidad-3"
             />
             <SidebarItem
-              icon={<SnippetFolder fontSize="small" />}
-              text="Registros"
-              to="/microprocesadores/registros"
+              icon={
+                <FastForward fontSize="small" />
+              }
+              text="Unidad 4"
+              to="/unidades/unidad-4"
             />
             <SidebarItem
-              icon={<Storage fontSize="small" />}
-              text="Buses de Datos"
-              to="/microprocesadores/buses"
+              icon={
+                <ControlCamera fontSize="small" />
+              }
+              text="Unidad 5"
+              to="/unidades/unidad-5"
             />
             <SidebarItem
-              icon={<Autorenew fontSize="small" />}
-              text="Ciclo de Ejecución"
-              to="/microprocesadores/ciclo-ejecucion"
+              icon={
+                <Dns fontSize="small" />
+              }
+              text="Unidad 6"
+              to="/unidades/unidad-6"
             />
             <SidebarItem
-              icon={<CompareArrows fontSize="small" />}
-              text="Modo de Dirección"
-              to="/microprocesadores/modo-direccion"
+              icon={
+                <Usb fontSize="small" />
+              }
+              text="Unidad 7"
+              to="/unidades/unidad-7"
             />
-            <SidebarItem
-              icon={<Block fontSize="small" />}
-              text="Interrupciones"
-              to="/microprocesadores/interrupciones"
-            />
+            
           </SidebarItem>
-          <SidebarItem
-            icon={<DeveloperBoard fontSize="small" />}
-            text="Microcontroladores"
-            subRoutes={[
-              "/microcontroladores/",
-              "/microcontroladores/aplicaciones",
-              "/microcontroladores/comunicacion",
-              "/microcontroladores/puerto-io",
-              "/microcontroladores/estructura",
-              "/microcontroladores/temporizadores-contadores",
-            ]}
-          >
-            <SidebarItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
-                  />
-                </svg>
-              }
-              text="Introduccion"
-              to="/microcontroladores"
-            />
-            <SidebarItem
-              icon={<AccountTree fontSize="small" />}
-              text="Estructura General"
-              to="/microcontroladores/Estructura"
-            />
-            <SidebarItem
-              icon={<Timelapse fontSize="small" />}
-              text="Temporizadores y Contadores"
-              to="/microcontroladores/temporizadores-contadores"
-            />
-            <SidebarItem
-              icon={<Cable fontSize="small" />}
-              text="Puertos IO"
-              to="/microcontroladores/puerto-io"
-            />
-            <SidebarItem
-              icon={<Nat fontSize="small" />}
-              text="Comunicacion Serial"
-              to="/microcontroladores/comunicacion"
-            />
-            <SidebarItem
-              icon={<Apps fontSize="small" />}
-              text="Applicaciones"
-              to="/microcontroladores/aplicaciones"
-            />
-          </SidebarItem>
-          {/* <SidebarItem
-            icon={<Difference fontSize="small" />}
-            text="Diferencias"
-            subRoutes={["/mprocess-vs-mcontroller"]}
-          >
-            <SidebarItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
-                  />
-                </svg>
-              }
-              text="Diferencias"
-              to="/mprocess-vs-mcontroller"
-            />
-          </SidebarItem> */}
-          <SidebarItem
-            icon={<Terminal fontSize="small" />}
-            text="Lenguaje Ensamblador"
-            subRoutes={["/ensamblador"]}
-          >
-            <SidebarItem
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
-                  />
-                </svg>
-              }
-              text="¿Que es?"
-              to="/ensamblador"
-            />
-            <SidebarItem
-              icon={<IntegrationInstructions fontSize="small" />}
-              text="Instrucciones"
-              to="/ensamblador/instruccion"
-            />
-            <SidebarItem
-              icon={<AccountTree fontSize="small" />}
-              text="Estructuras de Control"
-              to="/ensamblador/estructura-control"
-            />
-          </SidebarItem>
-          <SidebarItem
-            icon={<Terminal fontSize="small" />}
-            text="Lenguaje Arduino"
-            to="/arduino"
-          />
-          <SidebarItem
-            icon={<Recommend fontSize="small" />}
-            text="Recomendaciones"
-            to="/recomendaciones"
-          />
           <SidebarItem
             icon={<Article fontSize="small" />}
             text="Referencias"

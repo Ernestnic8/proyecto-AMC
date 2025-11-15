@@ -5,23 +5,26 @@ import TinyText from "@components/Base/TinyText";
 
 const Inicio = () => {
   return (
-    <Background text="Guía de AMC 1 - Arquitectura de Máquinas">
+    <Background text="Guía de AMC 2 - Arquitectura de Máquinas">
       <TinyText>
         Bienvenido a este sitio educativo dedicado a los contenidos de la
-        asignatura Arquitectura de Máquinas I de la carrera de Computación. Aquí
-        encontrarás explicaciones accesibles y estructuradas sobre temas clave
-        como la arquitectura interna de los microprocesadores, el funcionamiento
-        de los microcontroladores, la programación en lenguaje ensamblador el{" "}
-        manejo de interrupciones y las diferencias esenciales entre hardware de
-        propósito general y embebido.
+        asignatura Arquitectura de Máquinas II de la carrera de Computación. En
+        esta guía encontrarás las siguientes unidades:
         <br />
         <br />
-        Además, incluimos ejemplos prácticos, diagramas explicativos y guías
-        paso a paso para entender cómo interactúan los registros, buses,
-        temporizadores y puertos de E/S en sistemas digitales modernos. Esta
-        guía está pensada tanto para reforzar tus conocimientos teóricos como
-        para ayudarte en el desarrollo de proyectos reales de automatización,
-        domótica y electrónica aplicada.
+        Unidad I: Introducción a la Arquitectura y Organización de Computadoras.
+        <br />
+        Unidad II: Organización del CPU.
+        <br />
+        Unidad 3: Conjunto de Instrucciones.
+        <br />
+        Unidad 4: Unidad de Ejecución.
+        <br />
+        Unidad 5: Unidad de Control.
+        <br />
+        Unidad 6: Sistema de Memoria.
+        <br />
+        Unidad VII: Sistema de Entrada y Salida (E/S).
       </TinyText>
 
       <div className="flex flex-col items-center mt-50">
@@ -31,16 +34,13 @@ const Inicio = () => {
             <strong>Francisco Castillo - Carnet: 2020-0399U</strong>
           </li>
           <li>
-            <strong>Christian Mongalo - Carnet: 2019-0848U</strong>
+            <strong>Guillermo Castillo - Carnet: 2020-0379U</strong>
           </li>
           <li>
-            <strong>Luis López - Carnet: 2022-0262U </strong>
+            <strong>Eduardo Sandino - Carnet: 2021-0477U </strong>
           </li>
           <li>
-            <strong>Nohelia Baldiosea - Carnet: 2022-0479U</strong>
-          </li>
-          <li>
-            <strong>Ashley Rocha - Carnet: 2022-0347</strong>
+            <strong>Hansel Centeno - Carnet: 2021-0206U</strong>
           </li>
         </ListDisc>
       </div>
